@@ -80,6 +80,7 @@ const Footer = () => {
           &copy; Piyush Software Developer 2025 Inc. All rights reserved
         </div>
       </div>
+      <h1 className="bg-amber-500">Hi this is GitHub</h1>
     </div>
   );
 };
