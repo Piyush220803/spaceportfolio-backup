@@ -164,6 +164,12 @@ export const Frontend_skill = [
     width: 80,
     height: 80,
   },
+  {
+    skill_name: "JQuery",
+    Image: "/jquery-vertical.svg",
+    width: 80,
+    height: 80,
+  },
 ];
 
 export const Backend_skill = [
@@ -191,12 +197,12 @@ export const Backend_skill = [
     width: 55,
     height: 55,
   },
-  // {
-  //   skill_name: "Postger SQL",
-  //   Image: "/postger.png",
-  //   width: 70,
-  //   height: 70,
-  // },
+  {
+    skill_name: "Postger SQL",
+    Image: "/postger.png",
+    width: 70,
+    height: 70,
+  },
   {
     skill_name: "My SQL",
     Image: "/mysql.png",
@@ -237,12 +243,12 @@ export const Full_stack = [
     height: 70,
   },
 
-  // {
-  //   skill_name: "Figma",
-  //   Image: "/figma.png",
-  //   width: 50,
-  //   height: 50,
-  // },
+  {
+    skill_name: "Figma",
+    Image: "/figma.png",
+    width: 50,
+    height: 50,
+  },
 ];
 
 // export const Other_skill = [
