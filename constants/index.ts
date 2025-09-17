@@ -82,18 +82,33 @@ export const Skill_data = [
 export const Socials = [
   {
     name: "Github",
-    src: "githublogo.svg",
+    src: "/githublogo.svg",
     href: "https://github.com/Piyush220803",
-  },
-  {
-    name: "Linkedin",
-    src: "https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg",
-    href: "https://www.linkedin.com/in/piyush-pandey-9a7929222/",
   },
   {
     name: "Instagram",
     src: "/instagram.svg",
     href: "https://www.instagram.com/piyushpandey228",
+  },
+  {
+    name: "Facebook",
+    src: "/facebook.svg",
+    href: "https://facebook.com/profile.php?id=100009147628055",
+  },
+  {
+    name: "LinkedIn",
+    src: "/linkedin.svg",
+    href: "https://www.linkedin.com/in/piyush-pandey-9a7929222/",
+  },
+  {
+    name: "WhatsApp",
+    src: "/whatsapp.svg",
+    href: "https://wa.me/918252313317",
+  },
+  {
+    name: "Email",
+    src: "/email.svg",
+    href: "mailto:piyush.techdev@gmail.com",
   },
 ];
 

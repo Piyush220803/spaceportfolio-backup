@@ -1,13 +1,11 @@
 import Encryption from "@/components/main/Encryption";
-import Hero from "@/components/main/Hero";
 import Navbar from "@/components/main/Navbar";
 
-export default function Home() {
+export default function EncryptionPage() {
   return (
     <main className="h-full w-full">
       <Navbar />
-      <div className="flex flex-col gap-20">
-        <Hero />
+      <div className="pt-20">
         <Encryption />
       </div>
     </main>
