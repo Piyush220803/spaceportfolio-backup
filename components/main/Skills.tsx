@@ -11,6 +11,18 @@ import SkillDataProvider from "../sub/SkillDataProvider";
 import SkillText from "../sub/SkillText";
 
 const Skills = () => {
+  // Combine all skills into one array
+  const allSkills = [...Skill_data, ...Frontend_skill, ...Backend_skill, ...Full_stack];
+  
+  // Create pyramid rows: 5, 4, 3, 2, 1
+  const pyramidRows = [
+    allSkills.slice(0, 5),   // Row 1: 5 skills
+    allSkills.slice(5, 9),   // Row 2: 4 skills
+    allSkills.slice(9, 12),  // Row 3: 3 skills
+    allSkills.slice(12, 14), // Row 4: 2 skills
+    allSkills.slice(14, 15), // Row 5: 1 skill
+  ];
+
   return (
     <section
       id="skills"
@@ -19,53 +31,24 @@ const Skills = () => {
     >
       <SkillText />
 
-      <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
-        {Skill_data.map((image, index) => (
-          <SkillDataProvider
-            key={index}
-            src={image.Image}
-            width={image.width}
-            height={image.height}
-            index={index}
-            skill_name={image.skill_name}
-          />
-        ))}
-      </div>
-
-      <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
-        {Frontend_skill.map((image, index) => (
-          <SkillDataProvider
-            key={index}
-            src={image.Image}
-            width={image.width}
-            height={image.height}
-            index={index}
-            skill_name={image.skill_name}
-          />
-        ))}
-      </div>
-      <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
-        {Backend_skill.map((image, index) => (
-          <SkillDataProvider
-            key={index}
-            src={image.Image}
-            width={image.width}
-            height={image.height}
-            index={index}
-            skill_name={image.skill_name}
-          />
-        ))}
-      </div>
-      <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
-        {Full_stack.map((image, index) => (
-          <SkillDataProvider
-            key={index}
-            src={image.Image}
-            width={image.width}
-            height={image.height}
-            index={index}
-            skill_name={image.skill_name}
-          />
+      {/* Pyramid Layout */}
+      <div className="flex flex-col items-center gap-8 mt-8">
+        {pyramidRows.map((row, rowIndex) => (
+          <div 
+            key={rowIndex}
+            className="flex flex-row justify-center items-center gap-6"
+          >
+            {row.map((skill, skillIndex) => (
+              <SkillDataProvider
+                key={`${rowIndex}-${skillIndex}`}
+                src={skill.Image}
+                width={skill.width}
+                height={skill.height}
+                index={rowIndex * 5 + skillIndex}
+                skill_name={skill.skill_name}
+              />
+            ))}
+          </div>
         ))}
       </div>
       {/* <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
