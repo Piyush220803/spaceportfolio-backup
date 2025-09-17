@@ -32,14 +32,14 @@ const generateSpherePoints = (count: number, radius: number): Float32Array => {
 const StarBackground = (props: any) => {
   const ref: any = useRef(null);
   const [sphere] = useState(() => {
-    // Use our custom sphere generation function
-    const positions = generateSpherePoints(5000, 1.2);
+    // Use our custom sphere generation function with reduced count for better performance
+    const positions = generateSpherePoints(3000, 1.2);
     
     // Validate positions
     for (let i = 0; i < positions.length; i++) {
       if (isNaN(positions[i]) || !isFinite(positions[i])) {
         console.warn("Invalid position detected, regenerating...");
-        return generateSpherePoints(5000, 1.2);
+        return generateSpherePoints(3000, 1.2);
       }
     }
     

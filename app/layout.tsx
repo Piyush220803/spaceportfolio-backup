@@ -5,6 +5,7 @@ import StarsCanvas from "@/components/main/StarBackground";
 import Navbar from "@/components/main/Navbar";
 import Footer from "@/components/main/Footer";
 import { ModalProvider } from "@/contexts/ModalContext";
+import PerformanceMonitor from "@/components/PerformanceMonitor";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,11 +26,14 @@ export default function RootLayout({
         suppressHydrationWarning={true}
       >
         <ModalProvider>
+          <PerformanceMonitor />
           <StarsCanvas />
           <video
             autoPlay
             muted
             loop
+            playsInline
+            preload="metadata"
             className="rotate-180 absolute top-[-250px] sm:top-[-310px] left-1/2 transform -translate-x-1/2 z-0 w-full h-3/4 object-cover"
           >
             <source src="/blackhole.webm" type="video/webm" />

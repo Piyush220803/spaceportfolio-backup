@@ -116,9 +116,9 @@ const Encryption = () => {
           muted
           autoPlay
           playsInline
-          preload="false"
+          preload="metadata"
           className="w-full h-auto"
-          src="/encryption.webm/"
+          src="/encryption.webm"
         />
         {/* Stars overlay on top of video */}
         <div className="absolute inset-0 w-full h-full pointer-events-none z-[15]">
