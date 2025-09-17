@@ -2,6 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import {
   slideInFromLeft,
   slideInFromRight,
@@ -18,6 +19,7 @@ const Education = () => {
       location: "Roorkee, Uttarakhand",
       duration: "2021-2025",
       type: "Graduation",
+      image: "/roorkee-institute-of-technology-roorkee-colleges-q3zkp.avif",
       achievements: [
         "Pursuing Bachelor of Technology in Computer Science",
         "Maintaining strong academic performance with CGPA of 7.43",
@@ -32,6 +34,7 @@ const Education = () => {
       location: "Mughalsarai, Uttar Pradesh",
       duration: "2019-2021",
       type: "Higher Secondary",
+      image: "/kendriya-vidyala.jpg",
       achievements: [
         "Completed 12th standard with CBSE curriculum",
         "Strong foundation in Mathematics and Science",
@@ -46,11 +49,57 @@ const Education = () => {
       location: "Mughalsarai, Uttar Pradesh",
       duration: "2017-2019",
       type: "Secondary",
+      image: "/kendriya-vidyala.jpg",
       achievements: [
         "Completed 10th standard with CBSE curriculum",
         "Excellent performance in all subjects",
         "Participated in various school competitions",
         "Strong academic foundation for higher studies"
+      ]
+    },
+    {
+      institution: "ONLINE COURSES & CERTIFICATIONS",
+      degree: "AWS Cloud Practitioner",
+      details: "Amazon Web Services",
+      location: "Online Platform",
+      duration: "2023-2024",
+      type: "Certification",
+      image: "/roorkee-institute-of-technology-roorkee-colleges-q3zkp.avif",
+      achievements: [
+        "Completed AWS Cloud Practitioner Essentials certification",
+        "Gained expertise in cloud computing fundamentals",
+        "Understanding of AWS services and architecture",
+        "Prepared for advanced cloud certifications"
+      ]
+    },
+    {
+      institution: "SCRIMBA PLATFORM",
+      degree: "React Development",
+      details: "Frontend Development",
+      location: "Online Learning",
+      duration: "2023-2024",
+      type: "Course",
+      image: "/kendriya-vidyala.jpg",
+      achievements: [
+        "Completed comprehensive React development course",
+        "Mastered modern React concepts and hooks",
+        "Built multiple real-world projects",
+        "Advanced frontend development skills"
+      ]
+    },
+    {
+      institution: "SELF-DIRECTED LEARNING",
+      degree: "Full Stack Development",
+      details: "Continuous Learning",
+      location: "Various Platforms",
+      duration: "2020-Present",
+      type: "Self Study",
+      image: "/roorkee-institute-of-technology-roorkee-colleges-q3zkp.avif",
+      achievements: [
+        "Self-taught in multiple programming languages",
+        "Built numerous personal and professional projects",
+        "Stayed updated with latest technology trends",
+        "Developed strong problem-solving abilities"
       ]
     }
   ];
@@ -102,7 +151,8 @@ const Education = () => {
             <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${getTypeColor(edu.type)} opacity-10 rounded-full blur-3xl`}></div>
             
             <div className="relative z-10">
-              <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-6">
+              <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-6 gap-6">
+                {/* Content */}
                 <div className="flex-1">
                   <div className="flex items-center gap-3 mb-3">
                     <span className="text-2xl">{getTypeIcon(edu.type)}</span>
@@ -130,6 +180,23 @@ const Education = () => {
                     </div>
                   </div>
                 </div>
+
+                {/* Image Box - Right Side */}
+                <motion.div
+                  variants={index % 2 === 0 ? slideInFromRight(0.3) : slideInFromLeft(0.3)}
+                  className="flex-shrink-0"
+                >
+                  <div className="relative w-48 h-48 lg:w-56 lg:h-56 rounded-2xl overflow-hidden border-2 border-gray-600/50 hover:border-purple-500/50 transition-all duration-300 group">
+                    <Image
+                      src={edu.image}
+                      alt={edu.institution}
+                      fill
+                      className="object-cover group-hover:scale-110 transition-transform duration-300"
+                      sizes="(max-width: 768px) 192px, 224px"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  </div>
+                </motion.div>
               </div>
 
               <div className="space-y-4">

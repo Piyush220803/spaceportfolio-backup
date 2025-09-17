@@ -26,17 +26,17 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="flex flex-col items-center justify-center gap-3 h-full relative overflow-hidden pb-80 py-20 z-[50]"
+      className="flex flex-col items-center justify-center gap-3 h-full relative overflow-hidden pb-40 py-12 z-[50]"
       style={{ transform: "scale(0.9" }}
     >
       <SkillText />
 
       {/* Pyramid Layout */}
-      <div className="flex flex-col items-center gap-8 mt-8">
+      <div className="flex flex-col items-center gap-6 mt-6 w-full max-w-8xl px-12">
         {pyramidRows.map((row, rowIndex) => (
           <div 
             key={rowIndex}
-            className="flex flex-row justify-center items-center gap-6"
+            className="flex flex-row justify-center items-center gap-10 w-full"
           >
             {row.map((skill, skillIndex) => (
               <SkillDataProvider
