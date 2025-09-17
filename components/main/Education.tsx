@@ -56,51 +56,6 @@ const Education = () => {
         "Participated in various school competitions",
         "Strong academic foundation for higher studies"
       ]
-    },
-    {
-      institution: "ONLINE COURSES & CERTIFICATIONS",
-      degree: "AWS Cloud Practitioner",
-      details: "Amazon Web Services",
-      location: "Online Platform",
-      duration: "2023-2024",
-      type: "Certification",
-      image: "/roorkee-institute-of-technology-roorkee-colleges-q3zkp.avif",
-      achievements: [
-        "Completed AWS Cloud Practitioner Essentials certification",
-        "Gained expertise in cloud computing fundamentals",
-        "Understanding of AWS services and architecture",
-        "Prepared for advanced cloud certifications"
-      ]
-    },
-    {
-      institution: "SCRIMBA PLATFORM",
-      degree: "React Development",
-      details: "Frontend Development",
-      location: "Online Learning",
-      duration: "2023-2024",
-      type: "Course",
-      image: "/kendriya-vidyala.jpg",
-      achievements: [
-        "Completed comprehensive React development course",
-        "Mastered modern React concepts and hooks",
-        "Built multiple real-world projects",
-        "Advanced frontend development skills"
-      ]
-    },
-    {
-      institution: "SELF-DIRECTED LEARNING",
-      degree: "Full Stack Development",
-      details: "Continuous Learning",
-      location: "Various Platforms",
-      duration: "2020-Present",
-      type: "Self Study",
-      image: "/roorkee-institute-of-technology-roorkee-colleges-q3zkp.avif",
-      achievements: [
-        "Self-taught in multiple programming languages",
-        "Built numerous personal and professional projects",
-        "Stayed updated with latest technology trends",
-        "Developed strong problem-solving abilities"
-      ]
     }
   ];
 
@@ -151,71 +106,68 @@ const Education = () => {
             <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${getTypeColor(edu.type)} opacity-10 rounded-full blur-3xl`}></div>
             
             <div className="relative z-10">
-              <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-6 gap-6">
-                {/* Content */}
-                <div className="flex-1">
-                  <div className="flex items-center gap-3 mb-3">
-                    <span className="text-2xl">{getTypeIcon(edu.type)}</span>
-                    <div>
-                      <h2 className="text-2xl font-bold text-white">{edu.institution}</h2>
-                      <div className="flex items-center gap-2 mt-1">
-                        <span className={`px-3 py-1 text-xs font-semibold rounded-full bg-gradient-to-r ${getTypeColor(edu.type)} text-white`}>
-                          {edu.type}
-                        </span>
-                      </div>
-                    </div>
+              {/* 2-Grid Layout */}
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-6">
+                {/* Left Side - Information */}
+                <div className="flex flex-col justify-start">
+                  <div className="mb-3">
+                    <h2 className="text-2xl font-bold text-white mb-1">{edu.institution}</h2>
+                    <span className={`inline-block px-3 py-1 text-xs font-semibold rounded-full bg-gradient-to-r ${getTypeColor(edu.type)} text-white`}>
+                      {edu.type}
+                    </span>
                   </div>
                   
-                  <h3 className="text-xl font-semibold text-cyan-400 mb-3">{edu.degree}</h3>
-                  <p className="text-lg font-medium text-purple-300 mb-4">{edu.details}</p>
+                  <h3 className="text-xl font-semibold text-cyan-400 mb-1">{edu.degree}</h3>
+                  <p className="text-lg font-medium text-purple-300 mb-3">{edu.details}</p>
                   
-                  <div className="flex flex-col sm:flex-row sm:items-center gap-4 text-gray-300">
+                  <div className="flex flex-col gap-2 text-gray-300 mb-4">
                     <div className="flex items-center gap-2">
-                      <CalendarIcon className="h-5 w-5 text-purple-400" />
-                      <span>{edu.duration}</span>
+                      <CalendarIcon className="h-4 w-4 text-purple-400" />
+                      <span className="text-sm">{edu.duration}</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <MapPinIcon className="h-5 w-5 text-cyan-400" />
-                      <span>{edu.location}</span>
+                      <MapPinIcon className="h-4 w-4 text-cyan-400" />
+                      <span className="text-sm">{edu.location}</span>
                     </div>
+                  </div>
+
+                  {/* Key Highlights - Moved Up */}
+                  <div className="mt-2">
+                    <h4 className="text-lg font-semibold text-white mb-2 flex items-center gap-2">
+                      <StarIcon className="h-4 w-4 text-yellow-400" />
+                      Key Highlights:
+                    </h4>
+                    <ul className="space-y-1">
+                      {edu.achievements.map((achievement, achIndex) => (
+                        <motion.li
+                          key={achIndex}
+                          variants={slideInFromLeft(0.7 + achIndex * 0.1)}
+                          className="flex items-start gap-2 text-gray-300 text-sm leading-relaxed"
+                        >
+                          <div className={`w-1.5 h-1.5 bg-gradient-to-r ${getTypeColor(edu.type)} rounded-full mt-2 flex-shrink-0`}></div>
+                          <span>{achievement}</span>
+                        </motion.li>
+                      ))}
+                    </ul>
                   </div>
                 </div>
 
-                {/* Image Box - Right Side */}
+                {/* Right Side - Full Image */}
                 <motion.div
                   variants={index % 2 === 0 ? slideInFromRight(0.3) : slideInFromLeft(0.3)}
-                  className="flex-shrink-0"
+                  className="relative"
                 >
-                  <div className="relative w-48 h-48 lg:w-56 lg:h-56 rounded-2xl overflow-hidden border-2 border-gray-600/50 hover:border-purple-500/50 transition-all duration-300 group">
+                  <div className="relative w-full h-80 lg:h-96 rounded-2xl overflow-hidden border-2 border-gray-600/50 hover:border-purple-500/50 transition-all duration-300 group">
                     <Image
                       src={edu.image}
                       alt={edu.institution}
                       fill
                       className="object-cover group-hover:scale-110 transition-transform duration-300"
-                      sizes="(max-width: 768px) 192px, 224px"
+                      sizes="(max-width: 768px) 100vw, 50vw"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </div>
                 </motion.div>
-              </div>
-
-              <div className="space-y-4">
-                <h4 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
-                  <StarIcon className="h-5 w-5 text-yellow-400" />
-                  Key Highlights:
-                </h4>
-                <ul className="space-y-3">
-                  {edu.achievements.map((achievement, achIndex) => (
-                    <motion.li
-                      key={achIndex}
-                      variants={slideInFromLeft(0.7 + achIndex * 0.1)}
-                      className="flex items-start gap-3 text-gray-300 leading-relaxed"
-                    >
-                      <div className={`w-2 h-2 bg-gradient-to-r ${getTypeColor(edu.type)} rounded-full mt-2 flex-shrink-0`}></div>
-                      <span>{achievement}</span>
-                    </motion.li>
-                  ))}
-                </ul>
               </div>
             </div>
           </motion.div>
