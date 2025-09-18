@@ -2,7 +2,6 @@
 
 import dynamic from "next/dynamic";
 import Hero from "@/components/main/Hero";
-import Navbar from "@/components/main/Navbar";
 
 // Lazy load non-critical components
 const Encryption = dynamic(() => import("@/components/main/Encryption"), {
@@ -13,7 +12,6 @@ const Encryption = dynamic(() => import("@/components/main/Encryption"), {
 export default function Home() {
   return (
     <main className="h-full w-full">
-      <Navbar />
       <div className="flex flex-col gap-20">
         <Hero />
         <Encryption />
