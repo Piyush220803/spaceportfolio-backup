@@ -22,7 +22,7 @@ const HeroContent = () => {
     "Welcome to my portfolio",
     "Full Stack Software Engineer",
     "React Developer",
-    "Node.js Expert",
+    "DevOps Engineer",
     "Mobile App Developer"
   ];
 

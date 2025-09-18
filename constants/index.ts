@@ -147,37 +147,32 @@ export const PyramidSkills = {
 export const Socials = [
   {
     name: "Github",
-    src: "/github-142-svgrepo-com.svg",
-    href: "https://github.com/piyushpandey"
+    src: "/githublogo.svg",
+    href: "https://github.com/Piyush220803"
   },
   {
     name: "Facebook",
     src: "/facebook.svg",
-    href: "https://facebook.com/piyushpandey"
+    href: "https://facebook.com/profile.php?id=100009147628055"
   },
   {
     name: "LinkedIn",
     src: "/linkedin.svg",
-    href: "https://linkedin.com/in/piyushpandey"
+    href: "https://linkedin.com/in/piyush-pandey-9a7929222"
   },
   {
     name: "Instagram",
     src: "/instagram.svg",
-    href: "https://instagram.com/piyushpandey"
-  },
-  {
-    name: "Discord",
-    src: "/discord.svg",
-    href: "https://discord.com/users/piyushpandey"
+    href: "https://instagram.com/piyushpandey228"
   },
   {
     name: "WhatsApp",
     src: "/whatsapp.svg",
-    href: "https://wa.me/your-phone-number"
+    href: "https://wa.me/918252313317"
   },
   {
-    name: "YouTube",
-    src: "/youtube-svgrepo-com.svg",
-    href: "https://youtube.com/@piyushpandey"
+    name: "Personal Website",
+    src: "/globe.svg",
+    href: "https://www.piyush.engineer/"
   }
 ];
