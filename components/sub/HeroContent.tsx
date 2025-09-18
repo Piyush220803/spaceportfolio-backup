@@ -147,14 +147,31 @@ const HeroContent = () => {
             {/* Modal Header */}
             <div className="flex items-center justify-between p-4 bg-gray-800 border-b border-gray-700">
               <h3 className="text-xl font-semibold text-white">Piyush Pandey - Resume</h3>
-              <button
-                onClick={() => setIsModalOpen(false)}
-                className="p-2 text-gray-400 hover:text-white transition-colors duration-200"
-              >
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
+              <div className="flex items-center gap-2">
+                <a
+                  href="/Piyush-Pandey_Resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-3 py-1 rounded-md text-sm bg-gray-700 text-white hover:bg-gray-600 transition-colors"
+                >
+                  Open in new tab
+                </a>
+                <a
+                  href="/Piyush-Pandey_Resume.pdf"
+                  download
+                  className="px-3 py-1 rounded-md text-sm bg-gray-700 text-white hover:bg-gray-600 transition-colors"
+                >
+                  Download
+                </a>
+                <button
+                  onClick={() => setIsModalOpen(false)}
+                  className="p-2 text-gray-400 hover:text-white transition-colors duration-200"
+                >
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
             </div>
             
             {/* Modal Content - PDF */}
