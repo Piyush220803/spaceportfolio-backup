@@ -49,8 +49,8 @@ const Encryption = () => {
   }, [displayedQuote, currentIndex, isDeleting, cybersecurityQuotes]);
 
   return (
-    <div className="flex flex-col relative items-center justify-center min-h-screen w-full h-full z-[10] px-4 sm:px-6 lg:px-8">
-      <div className="absolute w-auto h-auto top-8 sm:top-12 lg:top-16 z-[5]">
+    <div className="flex flex-col relative items-center justify-center min-h-screen w-full h-screen z-[10] px-4 sm:px-6 lg:px-8">
+      <div className="absolute w-auto h-auto top-4 sm:top-8 lg:top-12 z-[5]">
         <motion.div
           variants={slideInFromTop}
           className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] font-medium text-center text-gray-200"
@@ -85,7 +85,7 @@ const Encryption = () => {
         </motion.div>
       </div>
 
-      <div className="flex flex-col items-center justify-center translate-y-[-20px] sm:translate-y-[-30px] lg:translate-y-[-50px] absolute z-[20] w-auto h-auto">
+      <div className="flex flex-col items-center justify-center translate-y-[-10px] sm:translate-y-[-20px] lg:translate-y-[-30px] absolute z-[20] w-auto h-auto">
         <div className="flex flex-col items-center group cursor-pointer w-auto h-auto">
           <Image
             src="/LockTop.png"
@@ -104,20 +104,20 @@ const Encryption = () => {
         </div>
 
       </div>
-      <div className="absolute z-[20] bottom-4 sm:bottom-6 lg:bottom-[10px] px-2 sm:px-4 lg:px-[5px]">
+      <div className="absolute z-[20] bottom-2 sm:bottom-4 lg:bottom-6 px-2 sm:px-4 lg:px-[5px]">
         <div className="cursive text-sm sm:text-base md:text-lg lg:text-[20px] font-medium text-center text-gray-300 max-w-xs sm:max-w-md lg:max-w-none mx-auto">
           Secure your data with end-to-end encryption
         </div>
       </div>
 
-      <div className="w-full flex items-start justify-center absolute">
+      <div className="w-full h-full flex items-center justify-center absolute inset-0 overflow-hidden">
         <video
           loop
           muted
           autoPlay
           playsInline
           preload="metadata"
-          className="w-full h-auto"
+          className="w-full h-full object-cover min-h-full min-w-full"
           src="/encryption.webm"
         />
         {/* Stars overlay on top of video */}

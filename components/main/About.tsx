@@ -52,7 +52,7 @@ const About = () => {
           <div className="text-center">
             <h2 className="text-2xl font-bold text-white mb-2">Piyush Pandey</h2>
             <p className="text-lg text-gray-400 mb-2">Full Stack Software Engineer</p>
-            <p className="text-sm text-gray-500 mb-4">B.Tech Computer Science | Roorkee Institute of Technology</p>
+            <p className="text-sm text-gray-500 mb-4">B.Tech Computer Science (Completed) | Roorkee Institute of Technology</p>
           </div>
         </motion.div>
 
@@ -71,7 +71,7 @@ const About = () => {
                 <h3 className="text-xl font-semibold text-white">My Journey</h3>
               </div>
               <p className="text-gray-300 leading-relaxed">
-                Currently pursuing B.Tech in Computer Science at Roorkee Institute of Technology, 
+                A recent B.Tech Computer Science graduate from Roorkee Institute of Technology, 
                 I'm a passionate Full Stack Developer with hands-on experience in building 
                 real-world applications. From developing mobile apps like "Sisu Logs - Baby Memory Diary" 
                 to creating innovative web solutions, I love turning ideas into reality through code.

@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="preload" href="/blackhole.webm" as="video" type="video/webm" />
+        <link rel="preload" href="/newblackhole.mp4" as="video" type="video/mp4" />
         <link rel="preload" href="/mainIconsdark.svg" as="image" type="image/svg+xml" />
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -47,9 +47,10 @@ export default function RootLayout({
             loop
             playsInline
             preload="none"
-            className="rotate-180 absolute top-[-250px] sm:top-[-310px] left-1/2 transform -translate-x-1/2 z-0 w-full h-3/4 object-cover"
+            className="absolute top-20 left-0 z-[5] w-full h-1/2 object-cover pointer-events-none"
+            style={{ transform: 'scaleX(-1)' }}
           >
-            <source src="/blackhole.webm" type="video/webm" />
+            <source src="/nnnn.mp4" type="video/mp4" />
           </video>
           <Navbar />
           <div className="relative z-[25] bg-black/20">

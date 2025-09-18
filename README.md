@@ -84,10 +84,10 @@ Welcome to my **Space Portfolio** - a breathtaking, interactive portfolio websit
    ```
 
 3. **Run the development server**
-   ```bash
-   npm run dev
-   # or
-   yarn dev
+```bash
+npm run dev
+# or
+yarn dev
    ```
 
 4. **Open your browser**
@@ -184,7 +184,7 @@ spaceportfolio-backup/
 ## 🏆 Achievements Showcase
 
 ### Academic Excellence
-- **B.Tech Computer Science** - Roorkee Institute of Technology (CGPA: 7.43)
+- **B.Tech Computer Science** - Roorkee Institute of Technology (Completed - CGPA: 7.43)
 - **CBSE Board** - Kendriya Vidyalaya (10th & 12th)
 
 ### Competition Wins

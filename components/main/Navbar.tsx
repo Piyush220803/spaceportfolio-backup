@@ -24,7 +24,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className={`w-full h-[85px] fixed top-0 shadow-2xl shadow-[#2A0E61]/40 bg-gradient-to-r from-black/30 via-black/20 to-black/30 backdrop-blur-2xl border-b border-[#7042f861]/40 z-50 transition-all duration-300 ${isModalOpen ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
+    <div className={`w-full h-20 fixed top-0 shadow-2xl shadow-[#2A0E61]/40 bg-gradient-to-r from-black/30 via-black/20 to-black/30 backdrop-blur-2xl border-b border-[#7042f861]/40 z-50 transition-all duration-300 ${isModalOpen ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
       <div className="w-full h-full flex items-center justify-center px-4 sm:px-6 lg:px-8">
         <div className="w-full max-w-7xl flex items-center justify-between">
           

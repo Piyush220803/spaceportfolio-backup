@@ -21,10 +21,10 @@ const Education = () => {
       type: "Graduation",
       image: "/roorkee-institute-of-technology-roorkee-colleges-q3zkp.avif",
       achievements: [
-        "Pursuing Bachelor of Technology in Computer Science",
-        "Maintaining strong academic performance with CGPA of 7.43",
+        "Completed Bachelor of Technology in Computer Science",
+        "Achieved strong academic performance with CGPA of 7.43",
         "Active participation in technical projects and coding competitions",
-        "Developing expertise in software development and programming"
+        "Developed expertise in software development and programming"
       ]
     },
     {
