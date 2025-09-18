@@ -1,70 +1,55 @@
 "use client";
 
-import {
-  Backend_skill,
-  Frontend_skill,
-  Full_stack,
-  Skill_data,
-} from "@/constants";
+import { PyramidSkills } from "@/constants";
 import React from "react";
 import SkillDataProvider from "../sub/SkillDataProvider";
 import SkillText from "../sub/SkillText";
 
 const Skills = () => {
-  // Combine all skills into one array
-  const allSkills = [...Skill_data, ...Frontend_skill, ...Backend_skill, ...Full_stack];
-  
-  // Create pyramid rows: 5, 4, 3, 2, 1
-  const pyramidRows = [
-    allSkills.slice(0, 5),   // Row 1: 5 skills
-    allSkills.slice(5, 9),   // Row 2: 4 skills
-    allSkills.slice(9, 12),  // Row 3: 3 skills
-    allSkills.slice(12, 14), // Row 4: 2 skills
-    allSkills.slice(14, 15), // Row 5: 1 skill
+  const pyramidLayers = [
+    { skills: PyramidSkills.topLayer, label: "", className: "text-purple-400" },
+    { skills: PyramidSkills.secondLayer, label: "", className: "text-blue-400" },
+    { skills: PyramidSkills.thirdLayer, label: "", className: "text-green-400" },
+    { skills: PyramidSkills.fourthLayer, label: "", className: "text-yellow-400" },
+    { skills: PyramidSkills.baseLayer, label: "", className: "text-gray-300" },
   ];
 
   return (
     <section
       id="skills"
-      className="flex flex-col items-center justify-center gap-3 h-full relative overflow-hidden pb-40 py-12 z-[50]"
+      className="flex flex-col items-center justify-center gap-3 h-full relative overflow-hidden pb-40 py-12"
       style={{ transform: "scale(0.9" }}
     >
       <SkillText />
 
       {/* Pyramid Layout */}
-      <div className="flex flex-col items-center gap-6 mt-6 w-full max-w-8xl px-12">
-        {pyramidRows.map((row, rowIndex) => (
-          <div 
-            key={rowIndex}
-            className="flex flex-row justify-center items-center gap-10 w-full"
-          >
-            {row.map((skill, skillIndex) => (
-              <SkillDataProvider
-                key={`${rowIndex}-${skillIndex}`}
-                src={skill.Image}
-                width={skill.width}
-                height={skill.height}
-                index={rowIndex * 5 + skillIndex}
-                skill_name={skill.skill_name}
-              />
-            ))}
+      <div className="flex flex-col items-center gap-8 mt-6 w-full max-w-8xl px-12">
+        {pyramidLayers.map((layer, layerIndex) => (
+          <div key={layerIndex} className="flex flex-col items-center gap-4">
+            {/* Layer Label */}
+            <div className={`text-sm font-semibold ${layer.className} mb-2`}>
+              {layer.label}
+            </div>
+            
+            {/* Skills Row */}
+            <div className="flex flex-row justify-center items-center gap-6 flex-wrap">
+              {layer.skills.map((skill, skillIndex) => (
+                <SkillDataProvider
+                  key={`${layerIndex}-${skillIndex}`}
+                  src={skill.Image}
+                  width={skill.width}
+                  height={skill.height}
+                  index={layerIndex * 10 + skillIndex}
+                  skill_name={skill.skill_name}
+                />
+              ))}
+            </div>
           </div>
         ))}
       </div>
-      {/* <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
-        {Other_skill.map((image, index) => (
-          <SkillDataProvider
-            key={index}
-            src={image.Image}
-            width={image.width}
-            height={image.height}
-            index={index}
-          />
-        ))}
-      </div> */}
 
-      <div className="w-full h-full absolute">
-        <div className="w-full h-full z-[-10] opacity-30 absolute flex items-center justify-center bg-cover">
+      <div className="w-full h-full absolute inset-0 pointer-events-none">
+        <div className="w-full h-full z-[-100] opacity-30 absolute top-20 left-0 right-0 bottom-0 flex items-center justify-center bg-cover">
           <video
             className="w-full h-auto"
             preload="false"

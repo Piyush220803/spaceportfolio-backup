@@ -19,11 +19,17 @@ const SkillDataProvider = ({ src, width, height, index, skill_name }: Props) => 
   });
 
   const imageVariants = {
-    hidden: { opacity: 0, scale: 0.8 },
+    hidden: { opacity: 1, scale: 1 },
     visible: { opacity: 1, scale: 1 },
   };
 
   const animationDelay = 0.3;
+
+  // Don't render if src is empty or invalid
+  if (!src || src.trim() === "") {
+    return null;
+  }
+
   return (
     <motion.div
       ref={ref}
