@@ -282,7 +282,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 **⭐ If you like this project, give it a star on GitHub!**
 
-Made with ❤️ by [Piyush Pandey](https://www.piyush.engineer)
+Made with ❤️ and Dedication by [Piyush Pandey](https://www.piyush.engineer)
 
 *"Turning ideas into reality with cutting-edge technology"*
 
