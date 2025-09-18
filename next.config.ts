@@ -50,7 +50,7 @@ const nextConfig: NextConfig = {
           },
           {
             key: 'Content-Security-Policy',
-            value: "frame-ancestors 'self'",
+            value: "frame-ancestors 'self' https://www.piyush.engineer https://piyush.engineer",
           },
           {
             key: 'X-XSS-Protection',

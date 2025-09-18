@@ -47,7 +47,7 @@ export default function RootLayout({
             loop
             playsInline
             preload="none"
-            className="absolute top-20 left-0 z-[5] w-full h-1/2 object-cover pointer-events-none"
+            className="absolute top-20 left-0 z-[5] w-full h-1/2 object-cover pointer-events-none video-mobile-offset"
             style={{ transform: 'scaleX(-1)' }}
           >
             <source src="/nnnn.mp4" type="video/mp4" />

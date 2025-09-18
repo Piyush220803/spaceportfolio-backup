@@ -149,7 +149,7 @@ const HeroContent = () => {
               <h3 className="text-xl font-semibold text-white">Piyush Pandey - Resume</h3>
               <div className="flex items-center gap-2">
                 <a
-                  href="/Piyush-Pandey_Resume.pdf"
+                  href="https://www.piyush.engineer/Piyush-Pandey_Resume.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-3 py-1 rounded-md text-sm bg-gray-700 text-white hover:bg-gray-600 transition-colors"
@@ -157,7 +157,7 @@ const HeroContent = () => {
                   Open in new tab
                 </a>
                 <a
-                  href="/Piyush-Pandey_Resume.pdf"
+                  href="https://www.piyush.engineer/Piyush-Pandey_Resume.pdf"
                   download
                   className="px-3 py-1 rounded-md text-sm bg-gray-700 text-white hover:bg-gray-600 transition-colors"
                 >
@@ -177,7 +177,7 @@ const HeroContent = () => {
             {/* Modal Content - PDF */}
             <div className="h-[calc(100%-80px)]">
               <iframe
-                src="/Piyush-Pandey_Resume.pdf"
+                src="https://www.piyush.engineer/Piyush-Pandey_Resume.pdf"
                 className="w-full h-full border-0"
                 title="Piyush Pandey Resume"
                 type="application/pdf"

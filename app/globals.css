@@ -66,3 +66,10 @@
 html {
   scroll-behavior: smooth;
 }
+
+/* Mobile-specific video offset without affecting desktop */
+@media (max-width: 767px) {
+  .video-mobile-offset {
+    top: -85px !important;
+  }
+}
