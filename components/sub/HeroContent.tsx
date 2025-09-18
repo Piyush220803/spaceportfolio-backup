@@ -177,10 +177,9 @@ const HeroContent = () => {
             {/* Modal Content - PDF */}
             <div className="h-[calc(100%-80px)]">
               <iframe
-                src="https://www.piyush.engineer/Piyush-Pandey_Resume.pdf"
+                src="/Piyush-Pandey_Resume.pdf"
                 className="w-full h-full border-0"
                 title="Piyush Pandey Resume"
-                type="application/pdf"
               />
             </div>
           </motion.div>
