@@ -20,7 +20,7 @@ const Experience = () => {
         "Boosted React Native app performance by 30-35% and improved UI responsiveness across iOS and Android",
         "Increased user engagement by revamping onboarding with 3D animations and interactive tutorials",
         "Overhauled the subscription UI with toggleable plans and payment flows",
-        "Developed a dynamic add-on management system using Redux for payment verification and pricing logic (Play Store)",
+        "Developed a dynamic add-on management system using Redux for payment verification and pricing logic",
         "Developed Sisu Logs - Baby Memory Diary app featuring secure photo/video storage, digital diary creation, and milestone tracking",
         "Implemented calendar view functionality for easy memory organization and occasion-based reminders for parents",
         "Built vaccination reminder system and parenting assistance features with age-appropriate toy and story suggestions"
